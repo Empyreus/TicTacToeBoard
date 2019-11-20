@@ -39,7 +39,7 @@ Piece TicTacToeBoard::toggleTurn()
 **/ 
 Piece TicTacToeBoard::placePiece(int row, int column)
 {
-  board[row][column] = turn
+  board[row][column] = turn;
   return board[row][column];
 }
 
