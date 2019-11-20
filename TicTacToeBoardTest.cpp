@@ -34,7 +34,7 @@ TEST(TicTacToeBoardTest, toggleTurnX)
 	TicTacToeBoard board;
 	board.toggleTurn();
 
-	ASSERT_EQ(board.toggleTurn(), 'X');
+	ASSERT_EQ(board.toggleTurn(), X);
 }
 
 TEST(TicTacToeBoardTest, toggleTurnX2)
@@ -45,4 +45,23 @@ TEST(TicTacToeBoardTest, toggleTurnX2)
 	board.toggleTurn();
 
 	ASSERT_EQ(board.toggleTurn(), X);
+}
+
+TEST(TicTacToeBoardTest, toggleTurnO2)
+{
+	TicTacToeBoard board;
+	board.toggleTurn();
+	board.toggleTurn();
+	board.toggleTurn();
+	board.toggleTurn();
+	
+	ASSERT_EQ(board.toggleTurn(), X);
+
+}
+
+TEST(TicTacToeBoardTest, getPeiceBlank)
+{
+	TicTacToeBoard board;
+	
+	ASSERT_EQ(board.getPeice(1,1), ' '); 
 }
