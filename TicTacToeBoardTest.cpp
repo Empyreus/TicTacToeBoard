@@ -59,7 +59,14 @@ TEST(TicTacToeBoardTest, toggleTurnO2)
 
 }
 
-TEST(TicTacToeBoardTest, getPeiceBlank)
+TEST(TicTacToeBoardTest, placePieceX11)
+{
+	TicTacToeBoard board;
+	
+	ASSERT_EQ(board.getPiece(1,1), ' '); 
+}
+
+TEST(TicTacToeBoardTest, getPieceBlank)
 {
 	TicTacToeBoard board;
 	
