@@ -61,7 +61,7 @@ Piece TicTacToeBoard::getWinner()
 
   bool winner = false;
 
-  peice winningPeice = Invalid;
+  piece winningPeice = Invalid;
 
   for(int i = 1; i < 3; i++){
     if(board[0][i] == board[0][i-1]){
