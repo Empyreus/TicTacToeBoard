@@ -62,8 +62,17 @@ TEST(TicTacToeBoardTest, toggleTurnO2)
 TEST(TicTacToeBoardTest, placePieceX11)
 {
 	TicTacToeBoard board;
-   board.placePiece(1,1);	
+   	board.placePiece(1,1);	
+
 	ASSERT_EQ(board.getPiece(1,1), X); 
+}
+
+TEST(TicTacToeBoardTest, placePieceO22)
+{
+	TicTacToeBoard board;
+	board.placePiece(2,2)
+	
+	ASSERT_EQ(board.getPiece(2,2), O); 
 }
 
 TEST(TicTacToeBoardTest, getPieceBlank)
@@ -72,3 +81,5 @@ TEST(TicTacToeBoardTest, getPieceBlank)
 	
 	ASSERT_EQ(board.getPiece(1,1), ' '); 
 }
+
+
