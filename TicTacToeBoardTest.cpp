@@ -70,7 +70,7 @@ TEST(TicTacToeBoardTest, placePieceX11)
 TEST(TicTacToeBoardTest, placePieceO22)
 {
 	TicTacToeBoard board;
-	board.placePiece(2,2)
+	board.placePiece(2,2);
 	
 	ASSERT_EQ(board.getPiece(2,2), O); 
 }
