@@ -97,7 +97,7 @@ TEST(TicTacToeBoardTest, testWinnerX)
 	ASSERT_EQ(board.getWinner(), X); 
 }
 
-TEST(TicTacToeBoardTest, testWinnerXDiag)
+TEST(TicTacToeBoardTest, testWinnerInv)
 {
 	TicTacToeBoard board;
 	board.placePiece(0,0);
@@ -108,7 +108,21 @@ TEST(TicTacToeBoardTest, testWinnerXDiag)
 	board.placePiece(2,2);
 
 	
-	ASSERT_EQ(board.getWinner(), X); 
+	ASSERT_EQ(board.getWinner(), Invalid); 
+}
+
+TEST(TicTacToeBoardTest, testWinnerInv)
+{
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	board.placePiece(1,1);
+	board.placePiece(1,2);
+	board.placePiece(2,1);
+	board.placePiece(2,2);
+
+	
+	ASSERT_EQ(board.getWinner(), Invalid); 
 }
 
 
