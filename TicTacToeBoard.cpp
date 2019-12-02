@@ -70,16 +70,23 @@ Piece TicTacToeBoard::getWinner()
 
   Piece winningPeice = Invalid;
 
-  for(int i = 1; i < 3; i++){
-    if(board[0][i] == board[0][i-1]){
-      winner = true;
-      winningPeice = board[0][i];
-    }
-    else{
-      winner = false;
-      winningPeice = Invalid;
+  for(int j = 0; j < 3; j++){
+    if(winner == true){
       break;
     }
+
+    for(int i = 1; i < 3; i++){
+      if(board[j][i] == board[j][i-1]){
+        winner = true;
+        winningPeice = board[j][i];
+      }
+      else{
+        winner = false;
+        winningPeice = Invalid;
+        break;
+      }
+    }
   }
+
   return winningPeice;
 }
