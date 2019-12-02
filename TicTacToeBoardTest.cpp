@@ -97,18 +97,18 @@ TEST(TicTacToeBoardTest, testWinnerX)
 	ASSERT_EQ(board.getWinner(), X); 
 }
 
-TEST(TicTacToeBoardTest, testWinnerInv)
+TEST(TicTacToeBoardTest, testWinnerXDiag)
 {
 	TicTacToeBoard board;
 	board.placePiece(0,0);
 	board.placePiece(1,0);
 	board.placePiece(1,1);
 	board.placePiece(1,2);
-	board.placePiece(2,1);
+	board.placePiece(2,2);
 	board.placePiece(2,2);
 
 	
-	ASSERT_EQ(board.getWinner(), Invalid); 
+	ASSERT_EQ(board.getWinner(), X); 
 }
 
 TEST(TicTacToeBoardTest, testWinnerInv)
