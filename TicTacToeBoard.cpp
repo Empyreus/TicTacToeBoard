@@ -122,5 +122,5 @@ Piece TicTacToeBoard::getWinner()
     return board[0][0];
   }
 
-  return winningPeice;
+  return Invalid;
 }
