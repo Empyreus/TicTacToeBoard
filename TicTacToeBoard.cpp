@@ -76,7 +76,7 @@ Piece TicTacToeBoard::getWinner()
     }
 
     for(int i = 1; i < 3; i++){
-      if(board[j][i] == board[j][i-1] && board[i][j] != ' '){
+      if(board[j][i] == board[j][i-1] && board[j][i] != ' '){
         winner = true;
         winningPeice = board[j][i];
       }
