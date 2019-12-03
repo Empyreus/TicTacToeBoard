@@ -86,7 +86,26 @@ Piece TicTacToeBoard::getWinner()
         break;
       }
     }
+
+    if(winner == true){
+      for(int i = 1; i < 3; i++){
+        if(board[i][j] == board[i-1][j]){
+          winner = true;
+          winningPeice = board[i][j];
+        }
+        else{
+          winner = false;
+          winningPeice = Invalid;
+          break;
+        }
+      }
+    }
   }
+
+  if(board[0][0] == board[1][1] && board[0][0] == board[2][2]){
+    return board[0][0];
+  }
+  if(board[0][2] == board[1][1] && board[0][2] == board[2][0])
 
   return winningPeice;
 }
