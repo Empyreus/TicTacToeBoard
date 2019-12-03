@@ -76,7 +76,7 @@ Piece TicTacToeBoard::getWinner()
     }
 
     for(int i = 1; i < 3; i++){
-      if(board[j][i] == board[j][i-1]){
+      if(board[j][i] == board[j][i-1] && board[i][j] != ' '){
         winner = true;
         winningPeice = board[j][i];
       }
@@ -89,7 +89,7 @@ Piece TicTacToeBoard::getWinner()
 
     if(winner == true){
       for(int i = 1; i < 3; i++){
-        if(board[i][j] == board[i-1][j]){
+        if(board[i][j] == board[i-1][j] && board[i][j] != ' '){
           winner = true;
           winningPeice = board[i][j];
         }
@@ -102,10 +102,12 @@ Piece TicTacToeBoard::getWinner()
     }
   }
 
-  if(board[0][0] == board[1][1] && board[0][0] == board[2][2]){
+  if(board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[1][1] != ' '){
     return board[0][0];
   }
-  if(board[0][2] == board[1][1] && board[0][2] == board[2][0])
+  if(board[0][2] == board[1][1] && board[0][2] == board[2][0] && board[1][1] != ' '){
+    return board[0][0];
+  }
 
   return winningPeice;
 }
