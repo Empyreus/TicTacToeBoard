@@ -139,7 +139,7 @@ TEST(TicTacToeBoardTest, testCats)
 
 
 	
-	ASSERT_EQ(board.getWinner(), ' '); 
+	ASSERT_EQ(board.getWinner(), Blank); 
 }
 
 
