@@ -124,4 +124,22 @@ TEST(TicTacToeBoardTest, testWinnerInv)
 	ASSERT_EQ(board.getWinner(), Invalid); 
 }
 
+TEST(TicTacToeBoardTest, testCats)
+{
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(0,1);
+	board.placePiece(0,2);
+	board.placePiece(1,0);
+	board.placePiece(1,1);
+	board.placePiece(1,2);
+	board.placePiece(2,0);
+	board.placePiece(2,1);
+	board.placePiece(2,2);
+
+
+	
+	ASSERT_EQ(board.getWinner(), ' '); 
+}
+
 

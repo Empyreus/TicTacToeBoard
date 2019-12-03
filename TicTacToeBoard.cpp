@@ -66,54 +66,14 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 Piece TicTacToeBoard::getWinner()
 {
 
-  // bool winner = false;
-
-  // Piece winningPeice = Invalid;
-
-  // for(int j = 0; j < 3; j++){
-  //   if(winner == true){
-  //     break;
-  //   }
-
-  //   for(int i = 1; i < 3; i++){
-  //     if(board[j][i] == board[j][i-1] && board[j][i] != ' '){
-  //       winner = true;
-  //       winningPeice = board[j][i];
-  //     }
-  //     else{
-  //       winner = false;
-  //       winningPeice = Invalid;
-  //       break;
-  //     }
-  //   }
-
-  //   if(winner == true){
-  //     for(int i = 1; i < 3; i++){
-  //       if(board[i][j] == board[i-1][j] && board[i][j] != ' '){
-  //         winner = true;
-  //         winningPeice = board[i][j];
-  //       }
-  //       else{
-  //         winner = false;
-  //         winningPeice = Invalid;
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
-
   for(int i = 0; i < 3; i++){
     if(board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][1] != ' '){
       return board[0][0];
     }
-
     if(board[0][i] == board[1][i] && board[0][1] == board[2][i] && board[1][i] != ' '){
       return board[0][0];
     }
-
   }
-
-
 
   if(board[0][0] == board[1][1] && board[0][0] == board[2][2] && board[1][1] != ' '){
     return board[0][0];
@@ -122,5 +82,15 @@ Piece TicTacToeBoard::getWinner()
     return board[0][0];
   }
 
-  return Invalid;
+  Piece result = ' ';
+
+  for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 3; j++){
+      if(board[i][j] == ' '){
+        result = Invalid;
+      }
+    }
+  }
+
+  return result;
 }
