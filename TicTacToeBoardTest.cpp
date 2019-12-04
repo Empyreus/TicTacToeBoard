@@ -94,7 +94,7 @@ TEST(TicTacToeBoardTest, getPieceBlank)
 }
 
 
-TEST(TicTacToeBoardTest, testWinnerX)
+TEST(TicTacToeBoardTest, testWinnerXHoriz)
 {
 	TicTacToeBoard board;
 	board.placePiece(0,0);
@@ -102,6 +102,19 @@ TEST(TicTacToeBoardTest, testWinnerX)
 	board.placePiece(0,1);
 	board.placePiece(1,1);
 	board.placePiece(0,2);
+
+	
+	ASSERT_EQ(board.getWinner(), X); 
+}
+
+TEST(TicTacToeBoardTest, testWinnerXVert)
+{
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,1);
+	board.placePiece(1,0);
+	board.placePiece(1,2);
+	board.placePiece(2,0);
 
 	
 	ASSERT_EQ(board.getWinner(), X); 
