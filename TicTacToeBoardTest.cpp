@@ -76,6 +76,16 @@ TEST(TicTacToeBoardTest, placePieceO22)
 	ASSERT_EQ(board.getPiece(2,2), O); 
 }
 
+TEST(TicTacToeBoardTest, placePieceX22Dup)
+{
+	TicTacToeBoard board;
+	board.placePiece(1,1);
+	board.placePiece(2,2);
+	board.placePiece(2,2);
+	
+	ASSERT_EQ(board.getPiece(2,2), O); 
+}
+
 TEST(TicTacToeBoardTest, getPieceBlank)
 {
 	TicTacToeBoard board;
