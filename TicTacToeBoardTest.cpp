@@ -128,7 +128,6 @@ TEST(TicTacToeBoardTest, testWinnerXDiagRever)
 	board.placePiece(1,1);
 	board.placePiece(1,2);
 	board.placePiece(2,0);
-
 	
 	ASSERT_EQ(board.getWinner(), X); 
 }
