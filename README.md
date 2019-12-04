@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Empyreus/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/Empyreus/TicTacToeBoard)
+
+[![Coverage Status](https://coveralls.io/repos/github/Empyreus/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/Empyreus/TicTacToeBoard?branch=master)
+
 # TicTacToeBoard
 
 ## Associated Enumerated Types
