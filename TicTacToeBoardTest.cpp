@@ -93,7 +93,6 @@ TEST(TicTacToeBoardTest, getPieceBlank)
 	ASSERT_EQ(board.getPiece(1,1), ' '); 
 }
 
-
 TEST(TicTacToeBoardTest, testWinnerXHoriz)
 {
 	TicTacToeBoard board;
@@ -102,7 +101,6 @@ TEST(TicTacToeBoardTest, testWinnerXHoriz)
 	board.placePiece(0,1);
 	board.placePiece(1,1);
 	board.placePiece(0,2);
-
 	
 	ASSERT_EQ(board.getWinner(), X); 
 }
@@ -115,7 +113,6 @@ TEST(TicTacToeBoardTest, testWinnerXVert)
 	board.placePiece(1,0);
 	board.placePiece(1,2);
 	board.placePiece(2,0);
-
 	
 	ASSERT_EQ(board.getWinner(), X); 
 }
@@ -128,7 +125,6 @@ TEST(TicTacToeBoardTest, testWinnerXDiag)
 	board.placePiece(1,1);
 	board.placePiece(1,2);
 	board.placePiece(2,2);
-
 	
 	ASSERT_EQ(board.getWinner(), X); 
 }
@@ -154,7 +150,6 @@ TEST(TicTacToeBoardTest, testWinnerInv)
 	board.placePiece(1,2);
 	board.placePiece(2,1);
 	board.placePiece(2,2);
-
 	
 	ASSERT_EQ(board.getWinner(), Invalid); 
 }
@@ -171,8 +166,6 @@ TEST(TicTacToeBoardTest, testCats)
 	board.placePiece(2,2);
 	board.placePiece(2,1);
 	board.placePiece(1,2);
-
-
 	
 	ASSERT_EQ(board.getWinner(), Blank); 
 }
